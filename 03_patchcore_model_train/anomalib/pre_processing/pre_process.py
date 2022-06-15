@@ -103,7 +103,8 @@ class PreProcessor:
 
         transforms: A.Compose
 
-        if self.config is None and self.image_size is not None:
+        # Rane: train and test all just run this
+        if self.config is None and self.image_size is not None:  
             if isinstance(self.image_size, int):
                 height, width = self.image_size, self.image_size
             elif isinstance(self.image_size, tuple):
